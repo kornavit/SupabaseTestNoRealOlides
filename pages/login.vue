@@ -1,9 +1,9 @@
 <script setup lang="ts">
 const login = async () => {
-  const { data, error } = await supabase().auth.signInWithOAuth({
+  await supabase().auth.signInWithOAuth({
     provider: 'github',
     options: {
-        redirectTo: 'http://localhost:3000/logout'
+      redirectTo: 'http://localhost:3000/auth/supabase/'
     }
   })
 }
