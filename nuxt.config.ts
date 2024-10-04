@@ -11,9 +11,9 @@ export default defineNuxtConfig({
   },
   
   runtimeConfig: {
-    public:{
-      PROJECTURL: process.env.PROJECTURL,
-      ANONKEY: process.env.ANONKEY,
+    public: {
+      projectSupabaseUrl: '',
+      supabaseAnonkey: ''
     }
-  },
+  }
 })

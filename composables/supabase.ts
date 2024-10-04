@@ -42,9 +42,10 @@ const customStorageAdapter: SupportedStorage = {
 
 export default function () {
     const config = useRuntimeConfig()
+
     return createClient(
-        config.public.PROJECTURL, 
-        config.public.ANONKEY,
+        config.public.projectSupabaseUrl,
+        config.public.supabaseAnonkey,
         {
             auth: {
                 detectSessionInUrl: true,
